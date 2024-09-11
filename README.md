@@ -37,7 +37,6 @@ PayWall, ödeme almak isteyen işletmelere uçtan uca kontrol sağlayan bir alty
 - **Kayıtlı Kart Güncelleme**
 
 ### Üye Yönetimi
-
 - **Üye Oluştur**
 - **Üye Güncelle**
 - **Üye Sil**
@@ -45,19 +44,16 @@ PayWall, ödeme almak isteyen işletmelere uçtan uca kontrol sağlayan bir alty
 - **Üye Ara**
 
 ### Üye Banka Yönetimi
-
 - **Banka Yöntemi Ekle**
 - **Banka Yöntemi Düzenle**                                                                     
 - **Banka Yöntemi Sil**
 - **Banka Yöntemlerini Listele**
 
 ### Üye Valör/Komisyon
-
 - **Valör/Komisyon Ayarını Getir**
 - **Valör/Komisyon Ayarını Ekle (Var olanı da günceller)**
 
 ### Ödeme İşlemleri
-
 - **Direkt Ödeme (2D)** 
 - **Güvenli Ödeme (3D)** 
 - **Provizyon İşlemleri**
@@ -71,9 +67,7 @@ PayWall, ödeme almak isteyen işletmelere uçtan uca kontrol sağlayan bir alty
   - **Gün Sonu Verileri**
   - **Mutabakat Listesi**
 
-
 ### PayOut Servisi
-
 - **Bakiye Kontrol**
 - **Bakiye Kontrol (Ana Hesap)**
 - **Iban'a Gönderme**
@@ -82,8 +76,64 @@ PayWall, ödeme almak isteyen işletmelere uçtan uca kontrol sağlayan bir alty
 - **İşlem Sorgulama**
 - **Hesap Sorgulama**
 
+### Tekrarlı Ödeme Servisi
+- **Tekrarlı Ödeme Oluştur**
+- **Tekrarlı Ödeme Düzenle**
+- **Tekrarlı Ödeme Sorgula**
+- **Tekrarlı Ödeme Durdur**
+- **Tekrarlı Ödeme Sil**
+- **Tekrarlı Ödeme Yeniden Başlat**
+- **Tekrarlı Ödeme Sorgula**
+- **Tekrarlı Ödeme Kart**
+  - **Tekrarlı Ödeme Kapsamındaki Kartlar**
+  - **Tekrarlı Ödeme Kapsamına Yeni Kart Ekle**
+  - **Tekrarlı Ödeme Kapsamındaki Kartı Sil**
+- **Müşteri Havuzu**
+  - **Tekrarlı Ödeme Müşteri Havuz Listesi**
+  - **Tekrarlı Ödeme Müşteri Ara**
+- **Ürün/İçerik Havuzu**
+  - **Tekrarlı Ödeme Ürün/İçerik Havuz Listesi**
+  - **Tekrarlı Ödeme Ürün/İçerik Ara**
+
 ### LinkQr Servisi
 - **LinkQr Ödeme Emri Oluştur**
+
+### Checkout Servisi (Ortak Ödeme Sayfası)
+- **Ortak Ödeme Sayfası Oluştur**
+- **Ödeme Sorgulama**
+
+### Alternatif Ödeme (APM)
+- **DirectPay Tabanlı**
+  - **Ödeme Başlat**
+- **Otp Tabanlı** 
+  - **Ödeme Onayla / Otp Tabanlı**
+- **QR Tabanlı**
+  - **Ödeme Başlat / QR Tabanlı**
+- **CheckoutPage Tabanlı**
+  - **Ödeme Başlat (Id)**
+  - **Ödeme Başlat (Key)**
+- **APM'lerimi listele**
+- **Ödeme Sorgula**
+- **Ödeme İade İşlemi**
+- **Ödeme Kısmi İade İşlemi**
+
+### Kart Üretim Servisi
+- **Sanal Kart**
+  - **Oluştur**
+- **Fiziksel Kart**
+  - **Fiziksel Kart Ekle**
+- **Hesap / Bakiye Kontrol**
+- **Kart - Pasif Et**
+- **Kart - Aktif Et**
+- **Kart - Sil**
+- **Kart - Bakiye Artır**
+- **Kart - Bakiye Azalt**
+- **Kart - Detay**
+- **Kart - Liste**
+- **Kart - Telefon Güncelle**
+- **Kart - Açıklama Güncelle**
+- **Kart - Kart İşlemleri**
+- **Kart - Şifre Güncelle**
 
 ## Kurulum
 

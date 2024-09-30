@@ -4,6 +4,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using PayWall.NetCore;
+using PayWall.NetCore.Example.Handler;
 using PayWall.NetCore.Models.Abstraction;
 using PayWall.NetCore.Models.Request.Apm;
 using PayWall.NetCore.Models.Request.Apm.CheckoutBasedRequest;
@@ -27,7 +28,6 @@ using PayWall.NetCore.Models.Request.PrivatePayment;
 using PayWall.NetCore.Models.Request.Reconciliation.VPos;
 using PayWall.NetCore.Models.Request.Recurring;
 using PayWall.NetCore.Models.Request.Recurring.Card;
-using PayWall.NetCore.Models.Response.Apm.OtpResponse;
 using PayWall.NetCore.Models.Response.CardProduction.CardOperations;
 using PayWall.NetCore.Services;
 
@@ -48,7 +48,9 @@ builder.Services
         }
     );
 
-builder.Services.AddPaywallService(builder.Configuration);
+builder.Services.AddTransient<LoggingDelegatingHandler>();
+
+builder.Services.AddPaywallService(builder.Configuration, sp => sp.GetRequiredService<LoggingDelegatingHandler>());
 
 var app = builder.Build();
 
@@ -549,7 +551,7 @@ app.MapGet("/recurring/item/pool",
                 [FromHeader] string? itemtype, [FromHeader] string? itemname,
                 [FromHeader] string? amount) =>
             await payWallService.Payment.GetItemPoolListAsync(start, length, sortvalue, sortcolumn, itemtype, itemname,
-                amount,dateto, datefrom))
+                amount, dateto, datefrom))
     .WithTags("RecurringItemPool")
     .WithSummary("Tekrarlı Ödeme Ürün/İçerik Havuz Listesi")
     .WithDescription(
@@ -585,7 +587,6 @@ app.MapPost("/temp-card",
     .WithTags("TempCard");
 
 #endregion
-
 
 #endregion
 

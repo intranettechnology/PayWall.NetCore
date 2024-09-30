@@ -149,6 +149,19 @@ Aşağıdaki komutu kullanarak NuGet paketini yükleyebilirsiniz:
 ```bash
 dotnet add package PayWall.NetCore
 ```
+
+### Program.cs dosyanızda Aşağıdaki gibi AddPaywallService çağrımı yapınız
+
+```csharp
+builder.Services.AddPaywallService(builder.Configuration);
+```
+
+### Http MessageHandler eklemek isterseniz aşağıdaki gibi params ile handler tanımlayabilirsiniz.
+
+```csharp
+builder.Services.AddPaywallService(builder.Configuration, sp => sp.GetRequiredService<LoggingDelegatingHandler>());
+```
+
 ## Yapılandırma
 
 ### appsettings.json
@@ -171,6 +184,7 @@ Paketi yükledikten sonra `appsettings.json` içinde `PayWall` kısmının oldu�
 - **PublicKey:** Kimlik bilgisini panelden alabilirsiniz.
 - **PrivateClient:** Kimlik bilgisini panelden alabilirsiniz.
 - **PrivateKey:** Kimlik bilgisini panelden alabilirsiniz.
+
 
 ## Adresler 
 
